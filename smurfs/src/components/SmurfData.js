@@ -31,10 +31,12 @@ const SmurfData = ({ smurfs, isFetching, error, getSmurf }) => {
     const handleSubmitSmurf = e => {
         e.preventDefault();
         // addSmurf({newSmurf, newAge, newHeight});
-        addSmurf(smurf)
-        setNewSmurf('')
-        setNewHeight('')
-        setNewAge('')
+        addSmurf(smurf);
+        setNewSmurf('');
+        setNewHeight('');
+        setNewAge('');
+        console.log(smurf);
+        console.log(addSmurf);
     }
 
     if (isFetching) {

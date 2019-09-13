@@ -1,4 +1,4 @@
-import { FETCHING_DATA_START, GOT_SMURF, SUBMIT_FORM } from '../actions';
+import { FETCHING_DATA_START, GOT_SMURF, SUBMIT_FORM, POSTING_DATA_START } from '../actions';
 
 const initialState = {
 	smurfs: [
@@ -17,6 +17,12 @@ export const reducer = (state = initialState, action) => {
                 isFetching: true,
                 error: ''
             } 
+            case POSTING_DATA_START:
+                    return {
+                        ...state,
+                        isFetching: true,
+                        error: ''
+                    } 
         case GOT_SMURF:
             return {
                 ...state,

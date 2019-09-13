@@ -3,6 +3,7 @@ import axios from 'axios';
 export const FETCHING_DATA_START = 'FETCHING_DATA_START';
 export const GOT_SMURF = 'GOT_SMURF';
 export const SUBMIT_FORM = 'SUBMIT_FORM'
+export const POSTING_DATA_START = 'POSTING_DATA_START'
 
 export const getSmurf = () => {
 	return (dispatch) => {
@@ -18,6 +19,7 @@ export const getSmurf = () => {
 
 export const addSmurf = (smurf) => {
 	return (dispatch) => {
+        dispatch({ type: POSTING_DATA_START });
         axios
         .post('http://localhost:3333/smurfs', smurf)
         .then((res) => {

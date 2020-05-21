@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react'
+Wimport React, {useState, useEffect} from 'react'
 
 import {connect} from 'react-redux';
 
 import {getSmurf} from '../actions'
 import {addSmurf} from '../actions'
-const SmurfData = ({ smurfs, isFetching, error, getSmurf }) => {
+const SmurfData = ({ smurfs, isFetching, error, getSmurf,addSmurf }) => {
 
 
     const [newSmurf, setNewSmurf] = useState('')
@@ -96,4 +96,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {getSmurf})(SmurfData);
+export default connect(mapStateToProps, {getSmurf, addSmurf})(SmurfData);

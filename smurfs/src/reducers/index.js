@@ -32,7 +32,8 @@ export const reducer = (state = initialState, action) => {
         case SUBMIT_FORM:
             return {
                 ...state,
-                smurfs: action.payload
+                smurfs: action.payload,
+                isFetching: false
             }
 		default:
 			return state;

@@ -13,7 +13,10 @@ export const getSmurf = () => {
         .then((res) => {
 			console.log(res.data);
 			dispatch({ type: GOT_SMURF, payload: res.data });
-		});
+        })
+        .catch(err => {
+            console.log(err.message)
+        });
 	};
 };
 
